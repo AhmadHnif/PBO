@@ -11,7 +11,7 @@ public class Main {
         
         // Instansiasi objek class Login()
         Login user1 = new Login();
-        Login user2 = new Login("", "");
+        Login user2 = new Login("andi", "");
         
         boolean status = true;
         while (status) {            
