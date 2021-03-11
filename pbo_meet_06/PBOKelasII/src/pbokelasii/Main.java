@@ -1,4 +1,4 @@
-package pbomeet06;
+package pbokelasii;
 
 import java.io.BufferedReader;
 import java.io.IOException;

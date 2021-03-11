@@ -1,4 +1,4 @@
-package pbomeet06;
+package pbokelasii;
 
 public class Login {
     
@@ -6,6 +6,8 @@ public class Login {
     
     // Constructor
     public Login() {
+        this.username = "admin";
+        this.password = "admin123";
     }
     
     public Login(String username, String password) {
@@ -32,3 +34,4 @@ public class Login {
     }
     
 }
+
