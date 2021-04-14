@@ -1,9 +1,11 @@
 package programkalkulator;
 
-// Parent
+/**
+ * Superclass
+ * @author Wahid
+ */
 
 public class Kalkulasi {
-    
     int z;
     
     public void penjumlahan(int x, int y) {

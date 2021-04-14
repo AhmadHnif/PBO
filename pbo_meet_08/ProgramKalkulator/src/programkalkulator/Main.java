@@ -10,20 +10,19 @@ public class Main {
         // Start code
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        System.out.print("Bilangan a = ");
+        System.out.print("a = ");
         int a = Integer.parseInt(br.readLine());
-        System.out.print("Bilangan b = ");
+        System.out.print("b = ");
         int b = Integer.parseInt(br.readLine());
         
         // Object
+        Kalkulasi kalkulasi = new Kalkulasi();
+        kalkulasi.penjumlahan(a, b);
+        kalkulasi.pengurangan(a, b);
+        
         Kalkulator kalkulator = new Kalkulator();
-        kalkulator.penjumlahan(a, b);
         kalkulator.pengurangan(b, a);
         kalkulator.perkalian(a, b);
-        
-        Kalkulasi kalkulasi = new Kalkulasi();
-        kalkulasi.penjumlahan(a, a);
-        kalkulasi.pengurangan(a, b);
         
     }
     
