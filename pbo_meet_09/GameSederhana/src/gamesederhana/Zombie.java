@@ -1,6 +1,6 @@
 package gamesederhana;
 
-public class Zombie extends Enemy {
+public class Zombie extends Enemy{
 
     @Override
     int damage() {

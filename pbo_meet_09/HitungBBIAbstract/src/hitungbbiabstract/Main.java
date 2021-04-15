@@ -14,9 +14,10 @@ public class Main {
         
         // Object
         Lakilaki lk = new Lakilaki(tb);
-        System.out.println("\nBBI Laki-laki = " + lk.hitungBBI());
-        
         Perempuan pr = new Perempuan(tb);
+        
+        // Output
+        System.out.println("\nBBI Laki-laki = " + lk.hitungBBI());
         System.out.println("BBI Perempuan = " + pr.hitungBBI());
     }
     
