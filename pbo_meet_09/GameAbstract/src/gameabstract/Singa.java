@@ -3,8 +3,13 @@ package gameabstract;
 public class Singa extends Enemy {
     
     @Override
-    int damage() {
+    public int damage() {
         return 15;
+    }
+
+    @Override
+    String gerak() {
+        return "Lari";
     }
     
 }
