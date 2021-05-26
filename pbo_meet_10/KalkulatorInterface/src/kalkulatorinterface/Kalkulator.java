@@ -1,13 +1,12 @@
 package kalkulatorinterface;
 
-/*
-* Implement dari interface Operasi
-*/
-public class Kalkulator implements Operasi {
+public class Kalkulator implements Operasi{
     
-    // Atribut
     private double bil1, bil2;
     
+    /*
+     * Constructor
+     */
     public Kalkulator() {}
     
     public Kalkulator(double bil1, double bil2) {
@@ -15,16 +14,20 @@ public class Kalkulator implements Operasi {
         this.bil2 = bil2;
     }
     
-    // Setter
+    /*
+     * Setter
+     */
     public void setBil1(double bil1) {
         this.bil1 = bil1;
     }
-    
+
     public void setBil2(double bil2) {
         this.bil2 = bil2;
     }
-    
-    // Getter
+
+    /*
+     * Getter
+     */
     public double getBil1() {
         return bil1;
     }
@@ -33,7 +36,10 @@ public class Kalkulator implements Operasi {
         return bil2;
     }
 
-    
+    /*
+     * Override method yang ada di interface Operasi
+     */
+    @Override
     public void penjumlahan() {
         System.out.println("Hasil penjumlahan = " + (this.bil1 + this.bil2));
     }
@@ -53,4 +59,7 @@ public class Kalkulator implements Operasi {
         return this.bil1 / this.bil2;
     }
     
+    public double jumlah() {
+        return this.bil1 + this.bil2;
+    }
 }

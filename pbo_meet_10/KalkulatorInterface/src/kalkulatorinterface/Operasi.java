@@ -3,7 +3,7 @@ package kalkulatorinterface;
 public interface Operasi {
     
     /*
-    * Deklarasi method tanpa isi (body)
+    * Deklarasi method
     */
     public void penjumlahan();
     public void pengurangan();
