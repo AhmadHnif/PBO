@@ -7,11 +7,14 @@ import javax.swing.JOptionPane;
  *
  * @author taufik
  */
+// interface
 public class Login extends javax.swing.JFrame {
     private final Connection con;
     /**
      * Creates new form Login
      */
+    // konstruktor
+    // ketika class Login dipanggil, maka koneksi ke db &halaman login muncul
     public Login() {
         con = (Connection) new koneksi().getLogin();
         initComponents();
@@ -130,10 +133,10 @@ public class Login extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
         String username = "admin";
-
         String password = "admin";
-   
-        
+//        percabangan & error handling
+//        jika inputan username & password benar maka muncul pemberitahuan login sukses sebaliknya jika loginnya salah maka 
+//        muncul pemberitahuan username dan password salah
         if (username.equalsIgnoreCase(tfl_username.getText()) && password.equalsIgnoreCase(pfl_pass.getText())){
             this.setVisible(false);
             new Beranda().setVisible(true);

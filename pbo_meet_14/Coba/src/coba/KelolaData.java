@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+// interface & inheritance
 public class KelolaData extends javax.swing.JFrame {
     
     private final Connection con;
@@ -25,9 +26,6 @@ public class KelolaData extends javax.swing.JFrame {
      * Creates new form TambahData
      */
     DefaultTableModel model;
-    
-
-    
     
     public KelolaData() {
         con = new koneksi().getKoneksi();
@@ -152,6 +150,15 @@ public class KelolaData extends javax.swing.JFrame {
                 "Nama", "Jenis Kelamin", "NIM", "Jurusan", "Angkatan"
             }
         ));
+        tabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tabelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         tabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabelMouseClicked(evt);
@@ -317,6 +324,8 @@ public class KelolaData extends javax.swing.JFrame {
         reset();
     }//GEN-LAST:event_btnHapusActionPerformed
 
+    // enkapsulasi
+    // untuk reset data inputan form
     private void reset(){
         nama.setText("");
         jenis_kelamin.setSelectedIndex(0);
@@ -348,6 +357,10 @@ public class KelolaData extends javax.swing.JFrame {
             angkatan.setSelectedItem(model.getValueAt(i, 4).toString());
         }
     }//GEN-LAST:event_tabelMouseClicked
+
+    private void tabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tabelAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tabelAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -406,13 +419,17 @@ public class KelolaData extends javax.swing.JFrame {
     private javax.swing.JTextField nim;
     private javax.swing.JTable tabel;
     // End of variables declaration//GEN-END:variables
-
+    
+    // poliformis
+    // method yang dipakai di dua kelas (KelolaData & LihatData)
     private void tampilkan() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        int row = tabel.getRowCount();
-        for(int a=0; a<row;a++){
-            model.removeRow(0);
-        }
+//        int row = tabel.getRowCount();
+        // perulangan
+        // digunakan untuk membersihkan tampilan tabel setelah menginput data baru agar data tidak double
+//        for(int a=0; a<row;a++){
+//            model.removeRow(0);
+//        }
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/dbmahasiswa","root","");
             ResultSet rs = con.createStatement().executeQuery("SELECT * FROM mahasiswa");

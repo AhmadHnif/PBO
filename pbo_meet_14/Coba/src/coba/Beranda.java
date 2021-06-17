@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
  *
  * @author taufik
  */
+// interface
 public class Beranda extends javax.swing.JFrame {
 
     /**

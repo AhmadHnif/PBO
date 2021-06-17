@@ -22,7 +22,6 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 
 
-
 public class LihatData extends javax.swing.JFrame {
 
     /**
@@ -242,7 +241,9 @@ public class LihatData extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tabel;
     // End of variables declaration//GEN-END:variables
-
+    
+    // polimorfis
+    // method yang dipakai di dua kelas (KelolaData & LihatData)
     private void tampilkan() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         int row = tabel.getRowCount();

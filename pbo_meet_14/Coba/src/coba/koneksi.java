@@ -17,6 +17,7 @@ public class koneksi {
     private final String user = "root";
     private final String password = "";
     
+    // koneksi database
     public Connection getKoneksi(){
         if (koneksi == null){
             try {
